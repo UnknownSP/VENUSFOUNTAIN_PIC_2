@@ -44,35 +44,20 @@ typedef enum{
   IN_GAME = 1,
 } Game_mode;
 
-typedef enum{
-  LED = 0,
-  OUT = 1,
-} Output_t;
+#define M_L RB5
+#define M_R RB3
 
-typedef enum{
-  S_1 = 0,
-  S_2 = 1,
-} Input_t;
+#define LED_1 LATC1
+#define LED_2 LATC5
+#define LED_3 LATC6
+#define LED_4 LATC7
 
-void output(Output_t type, int num, int output);
-int input(Input_t type, int num);
-
-#define B1_S_1 RA1
-#define B1_S_2 RA0
-#define B1_OUT LATB5
-#define B1_LED LATC5
-#define B2_S_1 RA3
-#define B2_S_2 RA2
-#define B2_OUT LATB4
-#define B2_LED LATC6
-#define B3_S_1 RA5
-#define B3_S_2 RA4
-#define B3_OUT LATB3
-#define B3_LED LATC7
-#define B4_S_1 RA6
-#define B4_S_2 RA7
-#define B4_OUT LATB2
-#define B4_LED LATB0
+#define M_SENS1_R RA5
+#define M_SENS2_R RA4
+#define M_SENS1_L RA2
+#define M_SENS2_L RA1
+#define BALL_SENS_R RA3
+#define BALL_SENS_L RA0
 
 #ifdef	__cplusplus
 }
